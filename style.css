@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #eee;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #eee;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(#06beb6, #48b1bf);
+}
+
+.container {
+	width: 400px;
+	background: red;
+	background: rgba(57, 62, 70, 0.8);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.display {
+	width: 100%;
+	text-align: right;
+	height: 100px;
+	background-color: #222831;
+	color: white;
+	font-size: 2.75rem;
+	padding: 0rem 2.5rem;
+	line-height: 100px;
+	letter-spacing: 2px;
+	overflow: hidden;
+	transition: all .75s ease;
+	transition-property: width, border-radius;
+}
+
+.rounded-borders {
+	border-radius: 15px 15px 30px 30px;
+}
+
+.keypad {
+	display: grid;
+	grid-template-columns: repeat(4, 80px);
+	grid-template-rows: repeat(5, 80px);
+	gap: 4px;
+	justify-content: center;
+	padding: 1.125rem 0 1.125rem;
+}
+
+.keypad input {
+	font-size: 30px;
+	border: 0;
+	background: #ededed;
+	outline: none;
+	transition: opacity .125s;
+}
+
+.keypad input:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.keypad .func {
+	background: #32e0c4;
+	font-size: 1.75rem;
+}
+
+.keypad .operator {
+	background: #ddd;
+}
+
+.keypad .equal {
+	background: #222831;
+	color: white;
+}
+
+input[value="0"] {
+	grid-column: 1/3;
+}
